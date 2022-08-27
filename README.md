@@ -6,9 +6,9 @@ Verilen tarih aralığındaki günlerin gün bazlı olarak,
 4. Günden Bir Önceki İş Günü Bilgisi
 5. Günün Bulunduğu Çeyrek Dönemin Başlangıç Tarihi
 6. Günün Bulunduğu Çeyrek Dönemin Bitiş Tarihi
-7. Günün Bulunduğu Yıldaki Gün Sayısı
-8. Günün Bulunduğu Aydaki Gün Sayısı
-9. Günün Bulunduğu Haftadaki Gün Sayısı
+7. Günün Bulunduğu Yıldaki Kaçıncı Gün Olduğu Bilgisi
+8. Günün Bulunduğu Aydaki Kaçıncı Gün Olduğu Bilgisi
+9. Günün Bulunduğu Haftadaki Kaçıncı Gün Olduğu Bilgisi
 10. Günün Bulunduğu Çeyrek Dönem Sayısı
 11. Günün Tatil Bilgisi
 12. Günün Haftasonu Bilgisi
