@@ -11,7 +11,7 @@ public interface DateRepository {
 }
 
 /*
-INSERT INTO core_data.dm_time (
+INSERT INTO table_name (
   calendar_date, day_of_year, month_of_week,
   week_number, week_ending, accounting_month_end,
   calendar_month_end, month_day, month,
