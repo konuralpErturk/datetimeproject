@@ -1,4 +1,4 @@
-1900 ve 2100 tarihleri aralığındaki günlerin gün bazlı olarak,
+Verilen tarih aralığındaki günlerin gün bazlı olarak,
 
 1. Günün Bulunduğu Ayın Başlangıç Tarihi
 2. Günün Bulunduğu Ayın Bitiş Tarihi
