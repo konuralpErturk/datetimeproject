@@ -10,11 +10,11 @@ Verilen tarih aralığındaki günlerin,
 8. Günün Bulunduğu Aydaki Kaçıncı Gün Olduğu Bilgisi
 9. Günün Bulunduğu Haftadaki Kaçıncı Gün Olduğu Bilgisi
 10. Günün Bulunduğu Çeyrek Dönem Sayısı
-11. Günün Tatil Bilgisi
-12. Günün Haftasonu Bilgisi
-13. Günün Bağlı bulunduğu Haftanın Bitiş Tarihi
-14. Gün Eğer İş Günü İse Yıl İçindeki Kaçıncı İş Günü Sayısı
+11. Günün Tatil Olup Olmadığı Bilgisi
+12. Günün Haftasonu Olup Olmadığı Bilgisi
+13. Günün Bağlı Bulunduğu Haftanın Bitiş Tarihi
+14. Gün Eğer İş Günü İse Yıl İçindeki Kaçıncı İş Günü Olduğu
 
 Bilgileriyle aynı row'da oluşturulması için yazılmış olan koddur.
 
-Tatil günlerine Türkiye'de ilan edilmiş resmi tatil günleri dahil edilmiştir.
+Tatil günlerine Türkiye'de ilan edilmiş resmi tatil günleri dahil edilmiştir.(Dini Bayramlar Dahil Edilmemiştir.)
