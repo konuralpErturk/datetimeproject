@@ -1,4 +1,4 @@
-Verilen tarih aralığındaki günlerin gün bazlı olarak,
+Verilen tarih aralığındaki günlerin,
 
 1. Günün Bulunduğu Ayın Başlangıç Tarihi
 2. Günün Bulunduğu Ayın Bitiş Tarihi
@@ -13,7 +13,7 @@ Verilen tarih aralığındaki günlerin gün bazlı olarak,
 11. Günün Tatil Bilgisi
 12. Günün Haftasonu Bilgisi
 13. Günün Bağlı bulunduğu Haftanın Bitiş Tarihi
-14. Gün Eğer Yılbaşı İse Yıl İçindeki İş Günü Sayısı
+14. Gün Eğer İş Günü İse Yıl İçindeki Kaçıncı İş Günü Sayısı
 
 Bilgileriyle aynı row'da oluşturulması için yazılmış olan koddur.
 
