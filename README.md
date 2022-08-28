@@ -17,4 +17,4 @@ Verilen tarih aralığındaki günlerin,
 
 Bilgileriyle aynı row'da oluşturulması için yazılmış olan koddur.
 
-Tatil günlerine Türkiye'de ilan edilmiş resmi tatil günleri dahil edilmiştir.(Dini Bayramlar Dahil Edilmemiştir.)
+Tatil günlerine Türkiye'de ilan edilmiş resmi ve dini tatil günleri dahil edilmiştir.
