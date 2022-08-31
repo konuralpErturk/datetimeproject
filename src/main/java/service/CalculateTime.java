@@ -3,6 +3,7 @@ package service;
 import mapper.DateTime;
 import repository.DateRepository;
 import repository.DateRepositoryImpl;
+import util.Constants;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -12,23 +13,22 @@ import java.time.chrono.HijrahDate;
 import java.time.temporal.ChronoField;
 import java.util.*;
 
+import static java.lang.System.*;
 import static java.util.Calendar.*;
 
 public class CalculateTime {
-    static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
-    static Calendar cal = Calendar.getInstance();
-    static String firstDate = "19000101";
-    static String lastDate = "21000101";
-    static List<DateTime> resultList = new ArrayList<>();
+    static SimpleDateFormat dateFormat      = new SimpleDateFormat("yyyyMMdd");
+    static Calendar cal                     = Calendar.getInstance();
+    static List<DateTime> resultList        = new ArrayList<>();
     static List<String> holidayMonthDayList = new ArrayList<>();
-    static List<String> hijrahHolidayList = new ArrayList<>();
-    static DateRepository repository = new DateRepositoryImpl();
+    static List<String> hijrahHolidayList   = new ArrayList<>();
+    static DateRepository repository        = new DateRepositoryImpl();
 
-    static int workingDayOfYear = 0;
+    static int workingDayOfYear             = 0;
 
     public static void main(String[] args) throws ParseException
     {
-        getHijrahHolidays();
+        createHijrahHolidayList();
 
         createTurkishHolidayList();
 
@@ -78,7 +78,7 @@ public class CalculateTime {
         dateTime.setWeekend((isWeekend(cal) ? 1 : 0));
         dateTime.setWorkingDayOfYear(getWorkingDayOfYear(cal));
         dateTime.setWeekEnding(dateFormat.format(getWeekEnding(cal)));
-        System.out.println(dateTime);
+        out.println(dateTime);
     }
 
     private static int getWorkingDayOfYear(Calendar cal)
@@ -123,7 +123,7 @@ public class CalculateTime {
     }
 
     private static boolean isDateReachToLastDate(Calendar cal) {
-        return (Integer.parseInt(dateFormat.format(cal.getTime())) < Integer.parseInt(lastDate));
+        return (Integer.parseInt(dateFormat.format(cal.getTime())) < Integer.parseInt(Constants.DATES.LAST_DATE.getYear()));
     }
 
     private static boolean isWeekend(Calendar cal){
@@ -151,7 +151,7 @@ public class CalculateTime {
     }
 
     private static void createFirstDate() throws ParseException {
-        cal.setTime(dateFormat.parse(firstDate));
+        cal.setTime(dateFormat.parse(Constants.DATES.FIRST_DATE.getYear()));
     }
 
     static Date getMonthFirstDay(Calendar cal) {
@@ -200,10 +200,11 @@ public class CalculateTime {
         holidayMonthDayList.add("1029");
     }
 
-    static List<String> getHijrahHolidays() throws ParseException
+    static void createHijrahHolidayList() throws ParseException
     {
         Calendar cal=Calendar.getInstance();
-        cal.setTime(dateFormat.parse(firstDate));
+        cal.setTime(dateFormat.parse(Constants.DATES.FIRST_DATE.getYear()));
+
         while (isDateReachToLastDate(cal))
         {
             HijrahDate islamicDate = HijrahChronology.INSTANCE.date(LocalDate.of(cal.get(Calendar.YEAR),cal.get(Calendar.MONTH)+1, cal.get(Calendar.DATE)));
@@ -213,7 +214,6 @@ public class CalculateTime {
                 hijrahHolidayList.add(dateFormat.format(cal.getTime()));
             cal.add(DATE,1);
         }
-        return hijrahHolidayList;
 
     }
 }
